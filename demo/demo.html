@@ -55,7 +55,7 @@
         data = { words: [], sort: 'oldest' },
         handleInputWord = (a) => {
           if ('button' !== a.target.type) return;
-          const b = a.target.form.text.value,
+          const b = a.target.form.text.value, //getter
             c = a.target.value,
             d = document.getElementById('warnings');
           if (((d.innerHTML = ''), 'add' === c)) {
