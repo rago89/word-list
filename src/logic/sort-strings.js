@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 /**
  * Sorts an array of strings in different ways.
  * It does not modify the argument (no side-effects).
@@ -13,4 +14,21 @@
  * if the sortType is not one of these 6 options, a copy of toSort is returned
  * @returns {string[]} a new sorted array containing the same strings as toSort
  */
-export const sortStrings = () => {};
+
+export const sortStrings = (toSort = [], sortType = "oldest") => {
+  let sorted = [];
+
+  sorted =
+    sortType === "newest"
+      ? [...toSort].reverse()
+      : sortType === "a"
+      ? [...toSort].sort()
+      : sortType === "z"
+      ? [...toSort].sort().reverse()
+      : sortType === "shortest"
+      ? [...toSort].sort((a, b) => a.length - b.length)
+      : sortType === "longest"
+      ? [...toSort].sort((a, b) => a.length - b.length).reverse()
+      : [...toSort];
+  return sorted;
+};
