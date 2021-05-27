@@ -1,4 +1,4 @@
-const listContainer = document.getElementById('list-container');
+const listContainer = document.getElementById("list-container");
 
 /**
  * Renders an array of strings as an un ordered list into the #list-container element
@@ -9,7 +9,7 @@ const listContainer = document.getElementById('list-container');
 export const updateList = (toRender = []) => {
   const listItems = toRender.reduce((all, next) => {
     return `${all}<li>${next}</li>`;
-  }, '');
+  }, "");
   const sortedList = `<ul>${listItems}</ul>`;
   listContainer.innerHTML = sortedList;
 };

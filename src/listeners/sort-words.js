@@ -1,5 +1,5 @@
-import { handleSortWords } from '../handlers/sort-words.js';
+import { handleSortWords } from "../handlers/sort-words.js";
 
 document
-  .getElementById('sort-type')
-  .addEventListener('change', handleSortWords);
+  .getElementById("sort-type")
+  .addEventListener("change", handleSortWords);
