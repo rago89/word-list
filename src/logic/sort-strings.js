@@ -18,17 +18,24 @@
 export const sortStrings = (toSort = [], sortType = "oldest") => {
   let sorted = [];
 
-  sorted =
-    sortType === "newest"
-      ? [...toSort].reverse()
-      : sortType === "a"
-      ? [...toSort].sort()
-      : sortType === "z"
-      ? [...toSort].sort().reverse()
-      : sortType === "shortest"
-      ? [...toSort].sort((a, b) => a.length - b.length)
-      : sortType === "longest"
-      ? [...toSort].sort((a, b) => a.length - b.length).reverse()
-      : [...toSort];
+  switch (sortType) {
+    case "newest":
+      sorted = [...toSort].reverse();
+      break;
+    case "a":
+      sorted = [...toSort].sort();
+      break;
+    case "z":
+      sorted = [...toSort].sort().reverse();
+      break;
+    case "shortest":
+      sorted = [...toSort].sort((a, b) => a.length - b.length);
+      break;
+    case "longest":
+      sorted = [...toSort].sort((a, b) => a.length - b.length).reverse();
+      break;
+    default:
+      sorted = [...toSort];
+  }
   return sorted;
 };
