@@ -129,7 +129,7 @@ It does not modify the argument (no side-effects).
 
 ## updateList
 
-Renders an array of strings as an unordered list into the #list-container element
+Renders an array of strings as an un ordered list into the #list-container element
 
 | Param      | Type                              | Default         | Description                               |
 | ---------- | --------------------------------- | --------------- | ----------------------------------------- |
